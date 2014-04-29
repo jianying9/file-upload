@@ -45,6 +45,7 @@ public class UploadServlet extends HttpServlet {
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.addHeader("Access-Control-Allow-Origin", "*");
     }
 
     @Override
@@ -58,7 +59,6 @@ public class UploadServlet extends HttpServlet {
     @Override
     protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.addHeader("Access-Control-Allow-Origin", "*");
-        super.doOptions(req, resp);
     }
 
     /**
